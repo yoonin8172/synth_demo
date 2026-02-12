@@ -1,0 +1,259 @@
+/* Importing Google Fonts for thinner styles */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+
+:root {
+    /* Define font styles */
+    --font-family: 'Noto Sans', 'Inter', 'Pretendard', sans-serif;
+    --font-size: 16px;
+    --font-weight: 400;
+    --font-color: #222;
+}
+
+* {
+    font-family: var(--font-family) !important;
+    font-weight: var(--font-weight) !important;
+    /* Force apply font weight */
+}
+
+.hardware-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', 'Menlo', 'Consolas', monospace;
+    font-size: 1rem;
+    /* Reduced font size to fit text */
+    font-weight: 400;
+    /* Override for buttons */
+    background: #fff;
+    border: 1px solid #ccc;
+    /* Thin outline */
+    border-radius: 0;
+    /* Remove rounded corners */
+    color: #222;
+    padding: 0.5em 1em;
+    margin: 0 1.2em 0 0;
+    cursor: pointer;
+    transition: border 0.15s, box-shadow 0.15s;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 240px;
+    /* Fixed width to prevent resizing */
+    height: 48px;
+    box-shadow: none;
+}
+
+.hardware-btn span {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hardware-btn:active {
+    background: #f3f2ef;
+    border-color: #888;
+    color: #111;
+}
+
+.hardware-btn:hover {
+    background: #f5f4f1;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f6f4ef;
+    color: #222;
+    font-family: 'Noto Sans', 'Inter', 'Pretendard', sans-serif;
+    font-weight: var(--font-weight);
+    /* Use the root variable for font weight */
+}
+
+.workspace {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f6f4ef;
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 48px;
+    width: 100vw;
+    max-width: 1200px;
+    margin: 48px auto 0 auto;
+}
+
+.visualizer-section {
+    flex: 0 0 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.visualizer-wrapper {
+    width: 360px;
+    height: 360px;
+    background: #222;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 0;
+}
+
+#visualizer {
+    width: 340px;
+    height: 340px;
+    display: block;
+    border-radius: 50%;
+    background: #222;
+}
+
+.right-section {
+    flex: 1 1 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-width: 400px;
+    max-width: 700px;
+    margin-top: 24px;
+    /* Adjusted to maintain alignment */
+}
+
+.text-area-wrapper {
+    width: 100%;
+    margin-bottom: 32px;
+    padding: 0;
+    background: none;
+}
+
+#text-input {
+    width: 100%;
+    min-height: 160px;
+    /* Increased height */
+    max-height: 260px;
+    /* Adjusted max height */
+    border: 1px solid #ccc;
+    /* Thin outline */
+    border-radius: 0;
+    background: #fff;
+    color: #222;
+    font-size: 1rem;
+    /* Ensure consistent text size */
+    padding: 16px;
+    /* Maintain padding */
+    margin-bottom: 0;
+    box-shadow: none;
+    /* Removed shadow */
+    resize: none;
+    outline: none;
+    transition: border 0.15s;
+    font-family: 'Noto Sans', 'Inter', 'Pretendard', sans-serif;
+    font-weight: 200;
+}
+
+#text-input:focus {
+    /* Remove the black outline on focus */
+    border: 1px solid #ccc;
+    /* Keep the same border color as default */
+    outline: none;
+    box-shadow: none;
+}
+
+.panel-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    /* Ensure consistent spacing */
+    padding: 0 16px;
+    margin-top: 20px;
+    /* Adjust spacing between rows */
+}
+
+.status-light {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.18rem;
+    color: #222;
+    font-family: 'IBM Plex Mono', 'Menlo', 'Consolas', monospace;
+    margin: 0 0 0 18px;
+    height: 48px;
+    font-weight: 400;
+    /* Override for status light */
+}
+
+.status-light span {
+    font-size: 1rem;
+    /* Match other text sizes */
+}
+
+.led {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ccc;
+    box-shadow: none;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.led.on {
+    background: #ff4400;
+    box-shadow: 0 0 8px 2px #f44a, 0 0 0 1.5px #900 inset;
+}
+
+.led.off {
+    background: #ccc;
+    box-shadow: none;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px;
+    /* Adjust spacing */
+    margin-bottom: 16px;
+    /* Ensure consistent spacing between sliders */
+}
+
+.control-group label {
+    font-size: 1rem;
+    /* Match other text sizes */
+    font-weight: bold;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.control-group input[type="range"] {
+    width: 100%;
+    height: 6px;
+    background: #ddd;
+    border-radius: 3px;
+    accent-color: #888;
+}
+
+.hardware-btn,
+.status-light {
+    /* Apply the ultra-thin font to buttons and signals */
+    font-family: 'Noto Sans', 'Inter', 'Pretendard', sans-serif;
+    font-weight: 200;
+}

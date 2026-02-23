@@ -29,12 +29,12 @@ const MOOD_PRESETS = {
     },
     danger: {
         id: 'danger',
-        keywords: ['경고', '위험', '에러', '파괴', '공포', '긴급', 'error', 'warning', 'danger', 'red', 'kill', 'fire', 'critical'],
+        keywords: ['경고', '위험', '에러', '파괴', '공포', '긴급', '404', 'error', 'warning', 'danger', 'red', 'kill', 'fire', 'critical'],
         color: '#c93c18ff', waveType: 'sawtooth'
     },
     tech: {
         id: 'tech',
-        keywords: ['시스템', '데이터', '분석', '로봇', '작동', 'system', 'data', 'code', 'tech', 'blue', 'ok', 'logic'],
+        keywords: ['시스템', '데이터', '분석', '로봇', '작동', '인공지능','가상세계', 'system', 'data', 'code', 'tech', 'blue', 'ok', 'logic'],
         color: '#5a9494ff', waveType: 'square'
     },
     sad: {

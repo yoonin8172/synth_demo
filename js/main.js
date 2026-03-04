@@ -24,7 +24,7 @@ let stopSignal = false;
 const MOOD_PRESETS = {
     nature: {
         id: 'nature', // 카운팅을 위해 ID 추가
-        keywords: ['바람', '숲', '나무', '하늘', '구름', '사랑', '자연', '잔잔', 'flow', 'green', 'sky', 'wind', 'love', 'peace'],
+        keywords: ['바람', '숲', '나무', '하늘', '구름', '사랑', '자연', '꿈', 'flow', 'green', 'sky', 'wind', 'love', 'peace'],
         color: '#a3d4a3ff', waveType: 'sine'
     },
     danger: {
@@ -34,7 +34,7 @@ const MOOD_PRESETS = {
     },
     tech: {
         id: 'tech',
-        keywords: ['시스템', '데이터', '분석', '로봇', '작동', '인공지능','가상세계', 'system', 'data', 'code', 'tech', 'blue', 'ok', 'logic'],
+        keywords: ['시스템', '데이터', '분석', '로봇', '작동', '인공지능', '가상세계', 'system', 'data', 'code', 'tech', 'blue', 'logic'],
         color: '#5a9494ff', waveType: 'square'
     },
     sad: {
